@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>25th Anniversary Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+}
+
+/* Background */
+
+.cover{
+
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("images/bg.jpg");
+
+background-size:cover;
+background-position:center;
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* Invitation Card */
+
+.card{
+
+background:rgba(0,0,0,0.45);
+
+padding:50px 40px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:white;
+
+backdrop-filter: blur(6px);
+
+/* Golden Border */
+
+border:2px solid rgba(255,215,0,0.8);
+
+box-shadow:
+
+0 0 15px rgba(255,215,0,0.6),
+
+0 0 40px rgba(255,215,0,0.3);
+
+width:420px;
+
+max-width:90%;
+
+}
+
+/* Text */
+
+.names{
+
+font-family:'Great Vibes', cursive;
+
+font-size:55px;
+
+color:#FFD700;
+
+text-shadow:0 0 20px gold;
+
+margin:5px 0;
+
+}
+
+.and{
+
+color:#ff4d88;
+
+font-size:28px;
+
+margin:0;
+
+}
+
+.tagline{
+
+margin-top:20px;
+
+font-size:16px;
+
+}
+
+.ann{
+
+margin-bottom:30px;
+
+font-size:18px;
+
+}
+
+/* Button */
+
+.openBtn{
+
+padding:14px 40px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(45deg,#FFD700,#ffb347);
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.openBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px gold;
+
+}
+
+/* Mobile Responsive */
+
+@media(max-width:600px){
+
+.card{
+
+padding:30px 20px;
+
+}
+
+.names{
+
+font-size:38px;
+
+}
+
+.and{
+
+font-size:20px;
+
+}
+
+.tagline{
+
+font-size:14px;
+
+}
+
+.ann{
+
+font-size:16px;
+
+}
+
+.openBtn{
+
+padding:12px 28px;
+
+font-size:16px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body class="cover">
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<div class="card">
+
+<p>Together with their family</p>
+
+<h1 class="names">Pukesh Kumar</h1>
+
+<h2 class="and">&</h2>
+
+<h1 class="names">Ranjeeta Kumari</h1>
+
+<p class="tagline">cordially invite you to celebrate</p>
+
+<p class="ann">their 25th Wedding Anniversary</p>
+
+<button class="openBtn" onclick="openInvite()">
+
+Open Invitation
+
+</button>
+
+</div>
+
+<script>
+
+function openInvite(){
+
+var audio=document.getElementById("music");
+
+audio.play();
+
+window.location="invite.html";
+
+}
+
+</script>
+
+</body>
+</html>
